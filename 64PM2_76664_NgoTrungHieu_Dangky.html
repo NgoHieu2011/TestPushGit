@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="charset=utf-8">
+    <title>Registration</title>
+</head>
+
+<body style="background-color: #EFEFE7;">
+    <!-- create nav bar using boostrap -->
+    
+    <form name="f" method="POST" onchange="return check()">
+        <p style="color: red; text-align: center; width: 1080px;">Technology Discusion Forum Registration</p>
+        <table align="center" style="width: 600;" class=" textOnInput">
+            <tr align="left" style="font-weight: bolder;">
+                <th>Registration Infomation</th>
+            </tr>
+            <tr>
+                <td style="color: blue;">&nbsp&nbsp Email Address :</td>
+                <td colspan="2"><input type="text" name="email" onchange="return checkEmail()" required>
+                    <span style="color: red;">*</span>
+                </td>
+            </tr>
+            <tr>
+                <td style="color: blue;">&nbsp&nbsp Display Name :</td>
+                <td colspan="2" ><input type="text" name="name" id="name" onchange="return checkName()" required><span
+                        style="color: red;">*</span>
+                </td>
+            </tr>
+            <tr>
+                <td style="color: blue;">&nbsp&nbsp Password :</td>
+                <td colspan="2" ><input type="password" name="pass" id="pass" onchange="return checkPass1()" required><span
+                        style="color: red;">*</span></td>
+            </tr>
+            <tr>
+                <td style="color: blue;">&nbsp&nbsp Confirm Password :</td>
+                <td colspan="2" ><input type="password" name="confirm" id="confirm" onchange="return checkPass()" required><span
+                        style="color: red;">*</span></td>
+            </tr>
+            <tr align="left" style="font-weight: bolder;">
+                <th>Profile Infomation</th>
+            </tr>
+            <tr>
+                <td style="color: blue;">&nbsp&nbsp ICQ Number :</td>
+                <td colspan="2"><input type="text" name="ICQ" id="ICQ" onchange="return checkICQ()"></td>
+            </tr>
+            <tr>
+                <td style="color: blue;">&nbsp&nbsp AIM Number :</td>
+                <td colspan="2"><input type="text"></>
+            </tr>
+            <tr>
+                <td style="color: blue;">&nbsp&nbsp Websibe :</td>
+                <td colspan="2"><input type="text"></td>
+            </tr>
+            <tr>
+                <td style="color: blue;">&nbsp&nbsp Location :</td>
+                <td colspan=""><input type="text"></td>
+            </tr>
+            <tr>
+                <td style="color: blue;">&nbsp&nbsp Occupation :</td>
+                <td colspan="2"><input type="text"></td>
+            </tr><br>
+            <tr align="left" style="font-weight: bolder;">
+                <th>Preferences</th>
+            </tr>
+            <tr style="color: blue;">
+                <td colspan="3">&nbsp&nbsp Newletters :</td>
+            </tr>
+            <tr align="center">
+                <td colspan="3"><input type="checkbox" name="" id="" checked> <span style="font-weight: bolder;">
+                Like to reveive a regular Newsletters</span></td>
+            </tr>
+            <tr>
+                <td style="color: blue;">&nbsp&nbsp Always notify me repies:</td>
+                <td><input type="radio" name="notify" id="" checked>Yes</td>
+                <td><input type="radio" name="notify" id="">No</td>
+            </tr>
+            <tr class="row">
+                <td style="color: blue;">&nbsp&nbsp Always attach my signature :</td>
+                <td><input type="radio" name="attach" id="" checked>Yes</td>
+                <td><input type="radio" name="attach" id="">No</td>
+            </tr>
+            <tr class="row">
+                <td class="col-5" style="color: blue;">&nbsp&nbsp Always allow HTML:</td>
+                <td class="col-2"><input type="radio" name="allow" id="" checked>Yes</td>
+                <td class="col-2"><input type="radio" name="allow" id="">No</td>
+            </tr>
+            <tr>
+                <td style="color: blue;">&nbsp&nbsp Board language:</td>
+                <td colspan="2">
+                    <select name="language" id="" style="width: 140px;">
+                        <option value="1">English</option>
+                        <option value="2">Russia</option>
+                        <option value="3">China</option>
+                        <option value="3">Other</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td style="color: blue;">&nbsp&nbsp Board Style:</td>
+                <td colspan="2">
+                    <select name="style" id="" style="width: 140px;">
+                        <option value="dig" selected>digestTheme</option>
+                        <option value="low">lowTheme</option>
+                        <option value="up">upTheme</option>
+                        <option value="stand">standTheme</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td style="color: blue;">&nbsp&nbsp Time Zone:</td>
+                <td colspan="2">
+                    <select name="zone" id="" style="width: 140px;">
+                        <option value="GMT-0" selected >GMT+0</option>
+                        <option value="GMT-1"  >GMT+1</option>
+                        <option value="GMT-2" >GMT+2</option>
+                        <option value="GMT-3" >GMT+3</option>
+                        <option value="GMT-4" >GMT+4</option>
+                        <option value="GMT-5" >GMT+5</option>
+                        <option value="GMT-6" >GMT+6</option>
+                        <option value="GMT-7" >GMT+7</option>
+                        <option value="GMT-8" >GMT+8</option>
+                        <option value="GMT-9" >GMT+9</option>
+                        <option value="GMT-10" >GMT+10</option>
+                        <option value="GMT-11" >GMT+11</option>
+                        <option value="GMT-12" >GMT+12</option>
+                        <option value="GMT-13" >GMT+13</option>
+                        <option value="GMT-14" >GMT+14</option>
+                        <option value="GMT-15" >GMT+15</option>
+                        <option value="GMT-16" >GMT+16</option>
+                        <option value="GMT-17" >GMT+17</option>
+                        <option value="GMT-18" >GMT+18</option>
+                        <option value="GMT-19" >GMT+19</option>
+                        <option value="GMT-20" >GMT+20</option>
+                        <option value="GMT-21" >GMT+21</option>
+                        <option value="GMT-22" >GMT+22</option>
+                        <option value="GMT-23" >GMT+23</option>
+                    </select>
+                </td>
+            </tr>
+            <tr align="left" style="font-weight: bolder;">
+                <th>Sercurity Control Panel</th>
+            </tr>
+            <tr>
+                <td colspan="3" style="text-align: left; font-weight: bolder; width: 700px;">&nbsp&nbsp It's important you think before
+                    filling this in. You will not be able to change these at will. You will need an 
+                    admins approval to change them, for security purposes.      
+                </td>
+            </tr>
+            <tr class="row">
+                <td style="color: blue;">&nbsp&nbsp Sercurity Question:</td>
+                <td colspan="2" ><input type="text" name="SQues" id="SQues" required><span
+                        style="color: red;">*</span></td>
+            </tr>
+            <tr>
+                <td style="color: blue;">&nbsp&nbsp Sercurity Answer:</td>
+                <td colspan="2" ><input type="text" name="QAns" id="QAns" required><span
+                        style="color: red;">*</span></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button type="submit" id="submit" style="background-color: cyan;" name="submit"
+                        disabled>Submit</button>
+                </td>
+                <td><button type="reset" style="background-color: cyan;" onclick="clearAll()">Reset</button></td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        const submit = document.getElementById('submit');
+        const confirm = document.getElementById('confirm');
+        function check() {
+            if (f.email.value == "" || f.name.value == "" || f.pass.value == "" || f.confirm.value == "" || f.SQues.value == "" || f.QAns.value == "") {
+                submit.disabled = true;
+            }
+            else {
+                submit.disabled = false;
+            }
+        }
+
+        function checkPass() {
+            if (f.pass.value != f.confirm.value) {
+                confirm.setAttribute('style', 'border-color: red');
+                alert('Mật khẩu không khớp');
+            }
+        }
+        //checkpartten name
+        function checkName() {
+            var name = document.getElementById('name');
+            var namePattern = /^[a-zA-Z0-9]{6,}$/;
+            if (!namePattern.test(name.value)) {
+                alert('Tên đăng nhập phải có ít nhất 6 kí tự và không có kí tự đặc biệt');
+                name.focus();
+            }
+        }   
+        //checkpartten pass
+        function checkPass1() {
+            var pass = document.getElementById('pass');
+            var passPattern = /(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/;
+            if (!passPattern.test(pass.value)) {
+                alert('Mật khẩu phải có ít nhất 8 kí tự bao gồm chữ, số và kí tự đặc biệt');
+                pass.focus();
+            }
+        }
+        //checkpartten ICQ number
+        function checkICQ() {
+            var ICQ = document.getElementById('ICQ');
+            var ICQPattern = /^[0-9]{6,12}$/;
+            if (!ICQPattern.test(ICQ.value)) {
+                alert('ICQ number phải là số có ít nhất 6 kí tự và không quá 12 kí tự');
+                ICQ.focus();
+            }
+        }
+
+        function checkEmail(){
+            const regex = /[a-z]+@[a-z]+\.(com|org|net|gov)/g;
+            return regex.test(email);
+        }
+
+    </script>
+    <style>
+        .textOnInput input:focus {
+            background-color: rgb(219, 216, 145);
+        }
+    </style>
+</body>
+
+</html>
